@@ -17,7 +17,7 @@ This is a repository for my dotfiles, I use Arch Linux with Hyprland as my windo
 git clone https://github.com/eolybq/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
-Then you have to run `stow <each_folder_name>` to symlink the package conf files to the right directory.
+Then you have to run `stow <each_config_folder_name>` to symlink the package conf files to the right directory.
 
 ## Packages
 All manually installed packages with pacman are listed in the `packages.txt` file. Similarly all AUR packages installed with yay are listed in the `aur_packages.txt` file.
