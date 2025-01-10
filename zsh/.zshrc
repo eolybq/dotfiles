@@ -80,8 +80,6 @@ bindkey "^[[1;5C" forward-word     # Ctrl + Right → Skok o slovo vpravo
 
 
 
-
-
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history

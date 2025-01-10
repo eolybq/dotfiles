@@ -4,7 +4,9 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "carbonfox",
+				theme = "ayu_dark",
+                section_separators = '',
+                component_separators = { left = '|', right = '|' }
 			},
 		})
 	end,
