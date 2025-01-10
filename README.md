@@ -30,4 +30,5 @@ There are also theme files of catppuccin macchiato which can be easily applied o
 
 ## Screenshots
 ![Screenshot](screenshots/screen1.png)
+
 ![Screenshot](screenshots/screen2.png)
