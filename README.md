@@ -25,7 +25,6 @@ Run `sudo pacman -S --needed - < packages.txt` and `yay -S --needed - < aur_pack
 ## Theme
 Main theme is CarbonFox, although some apps like waybar or rofi are hand themed to look similar.
 There are also theme files of catppuccin macchiato which can be easily applied or renamed in order to swap theme. 
-Live wallpaper is runned by waypaper with mpvpaper as backend. 
 
 ## Screenshots
 ![Screenshot](screenshots/screen1.png)
