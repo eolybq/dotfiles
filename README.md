@@ -6,6 +6,8 @@ This is a repository for my dotfiles, I use Arch Linux with Hyprland as my windo
 - Terminal: Kitty
 - Shell: Zsh (with p10k)
 - Editor: Neovim (with Lazy.nvim as the plugin manager) / VSCode
+- App launcher: rofi
+- Status bar: waybar
 - Audio: PipeWire
 - Spotify: Spicetify
 - File Manager: Yazi / Nautilus
