@@ -1,0 +1,8 @@
+chosen=$(printf "⏻ Shutdown\n⟳ Reboot\n🔒 Lockscreen" | rofi -dmenu -i -theme powermenu)
+
+case "$chosen" in
+  "⏻ Shutdown") poweroff ;;
+  "⟳ Reboot") reboot ;;
+  "🔒 Lockscreen") hyprlock ;;
+  *) exit 1 ;;
+esac

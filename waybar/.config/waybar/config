@@ -1,0 +1,101 @@
+{
+  "margin-top" : 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "height" : 40,
+    "modules-left": [
+    "custom/logo",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "hyprland/window",
+    ],
+    "modules-right": [
+    "cpu",
+    "memory",
+    "custom/gpu-temp",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "clock",
+    ],
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 35,
+      "icon": true,
+      "rewrite": {
+      },
+      "separate-outputs": true,
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "active": "⬤",
+      },
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "*": 4, // 5 workspaces by default on every monitor
+      },
+    },
+    "clock": {
+     "format": "{:%H:%M} ",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+      "format": "{usage}% ",
+    },
+    "memory": {
+      "format": "{}% 󰑭"
+    },
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{temperatureC}°C {icon}",
+      "format-icons": ["", "", ""]
+    },
+        "network": {
+      "format-ethernet": "{cidr} ",
+      "tooltip-format": "{ifname} via {gwaddr} ",
+      "format-linked": "{ifname} (No IP) ",
+      "format-disconnected": " ⚠ ",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-bluetooth-muted": " {icon}",
+      "format-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+    },
+"bluetooth": {
+    "format-on": "",
+  "format-off": "",
+    "format-disabled": "󰂲",
+  "format-connected": "󰂴",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  "on-click": "blueman-manager"
+},
+"custom/gpu-temp": {
+  "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+  "format": "{}°C 󰘚",
+  "tooltip-format": "GPU temp: {}°C",
+  "return-type": "",
+  "interval": 5
+},
+  "custom/logo": {
+    "format": "",
+    "tooltip": false
+  },
+}
