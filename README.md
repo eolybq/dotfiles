@@ -25,7 +25,7 @@ All manually installed packages with pacman are listed in the `packages.txt` fil
 Run `sudo pacman -S --needed - < packages.txt` and `yay -S --needed - < aur_packages.txt` to install.
 
 ## Theme
-Main theme is CarbonFox which is available only for some packages like nvim, vscode or gtk apps. Therefore some things like waybar or rofi are hand themed to look similar.
+Main theme is NightFox colorscheme CarbonFox, which is available only for some packages like nvim, vscode or gtk apps. Therefore some things like waybar or rofi are hand themed to look similar.
 The custom CarbonFox theme configs are based on catppuccin macchiato, which with this system config looks quite good too. The unchanged theme files of catppuccin macchiato are in config folders so that it can be easily applied or renamed in order to swap theme. 
 
 ## Screenshots
