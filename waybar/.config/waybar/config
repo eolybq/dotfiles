@@ -24,6 +24,8 @@
       "max-length": 35,
       "icon": true,
       "rewrite": {
+      "(.*) — Mozilla Firefox": "$1",
+      "(.*) - Visual Studio Code": "$1",
       },
       "separate-outputs": true,
     },
