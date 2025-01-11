@@ -22,6 +22,7 @@
     "hyprland/window": {
       "format": "{}",
       "icon": true,
+      "max-length": 35,
       "rewrite": {
       "(.*) — Mozilla Firefox": "$1",
       "(.*) - Visual Studio Code": "$1",
