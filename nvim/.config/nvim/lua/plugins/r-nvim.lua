@@ -3,7 +3,7 @@ return {
     "R-nvim/R.nvim",
     config = function()
       local opts = {
-        external_term = "tmux split-window -h -l 40 -d",
+        external_term = "tmux split-window -h -l 45 -d",
         silent_term = true,
         auto_quit = true,
         auto_start = "always",
