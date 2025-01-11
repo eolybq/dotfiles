@@ -21,7 +21,6 @@
     ],
     "hyprland/window": {
       "format": "{}",
-      "max-length": 35,
       "icon": true,
       "rewrite": {
       "(.*) — Mozilla Firefox": "$1",
