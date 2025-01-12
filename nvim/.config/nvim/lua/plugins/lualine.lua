@@ -5,8 +5,17 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = "ayu_dark",
-                section_separators = '',
-                component_separators = { left = '|', right = '|' }
+				section_separators = "",
+				component_separators = { left = "|", right = "|" },
+			},
+			sections = {
+				lualine_x = {
+					{
+						require("noice").api.statusline.mode.get,
+						cond = require("noice").api.statusline.mode.has,
+						color = { fg = "#ff9e64" },
+					},
+				},
 			},
 		})
 	end,

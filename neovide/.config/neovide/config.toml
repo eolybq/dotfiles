@@ -1,0 +1,13 @@
+[font]
+# normal = "JetBrainsMono NFM SemiBold"
+# bold = "JetBrainsMono NFM ExtraBold"
+# size = 18
+
+size = 18
+[[font.normal]]
+family = "JetBrainsMono NFM"
+style = "SemiBold"
+
+[[font.bold]]
+family = "JetBrainsMono NFM"
+style = "ExtraBold"

@@ -26,7 +26,7 @@ return {
 			vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" }),
 			cmdline = {
 				format = {
-					shell = { pattern = "^:%s*!", icon = ">_", lang = "bash" },
+					shell = { pattern = "^:%s*!", icon = ">_", lang = "zsh" },
 					filter = false,
 				},
 			},
