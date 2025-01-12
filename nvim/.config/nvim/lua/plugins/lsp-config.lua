@@ -10,6 +10,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
