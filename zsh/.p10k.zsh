@@ -56,7 +56,6 @@
     command_execution_time    # previous command duration
     # =========================[ Line #2 ]=========================
     newline                   # \n
-    virtualenv                # python virtual environment
     anaconda
     prompt_char               # prompt symbol
   )
@@ -71,6 +70,11 @@
     # =========================[ Line #2 ]=========================
     newline                   # \n
   )
+
+  typeset -g POWERLEVEL9K_ANACONDA_BACKGROUND= 
+  typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND=2
+  typeset -g POWERLEVEL9K_ANACONDA_VISUAL_IDENTIFIER_EXPANSION='' # Ikona pro conda
+
 
   # Basic style options that define the overall prompt look.
   typeset -g POWERLEVEL9K_BACKGROUND=                            # transparent background

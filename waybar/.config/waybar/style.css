@@ -37,6 +37,11 @@ button:hover {
   border-radius: 10px;
 }
 
+#custom-notification:hover {
+  background-color: @surface2;
+  border-radius: 10px;
+}
+
 #bluetooth:hover {
   background-color: @surface2;
   border-radius: 10px;
@@ -85,6 +90,7 @@ button:hover {
 #network,
 #bluetooth,
 #custom-gpu-temp,
+#custom-notification,
 #pulseaudio {
   padding: 0 10px;
   transition: all 0.3s ease;
@@ -118,6 +124,10 @@ button:hover {
 
 #custom-gpu-temp {
   color: @maroon;
+}
+
+#custom-notification {
+  color: @bcyan;
 }
 
 #cpu {
