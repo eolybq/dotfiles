@@ -43,6 +43,7 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- for luasnip users.
+          { name = 'cmp_r' },
 					{ name = "buffer" },
 					{ name = "path" },
 				}),

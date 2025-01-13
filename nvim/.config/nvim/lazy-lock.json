@@ -4,6 +4,7 @@
   "R.nvim": { "branch": "main", "commit": "d989047c8577409094e956d9847a96fb7a16595f" },
   "catppuccin": { "branch": "main", "commit": "f67b886d65a029f12ffa298701fb8f1efd89295d" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },
+  "cmp-r": { "branch": "main", "commit": "18b88eeb7e47996623b9aa0a763677ac00a16221" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
   "copilot.vim": { "branch": "release", "commit": "87038123804796ca7af20d1b71c3428d858a9124" },
   "darklight.nvim": { "branch": "main", "commit": "5db97e2d132ebdf32c7e5edb5b0c68be9ae43038" },
