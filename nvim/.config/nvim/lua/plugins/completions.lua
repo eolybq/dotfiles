@@ -48,7 +48,7 @@ return {
           { name = "luasnip",  max_item_count = 5 },
           { name = "buffer",   priority = 500,    keyword_length = 4, max_item_count = 8 },
           { name = "path",     keyword_length = 2 },
-          { name = "codeium",  priority = 1000 },
+          { name = "codeium", priority = 1000 }
         }),
       })
         formatting = {
