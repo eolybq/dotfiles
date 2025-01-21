@@ -15,6 +15,11 @@ window#waybar {
 
 window#waybar.empty .modules-center {
     background-color: transparent;
+  background: none; /* Tímto způsobem zrušíte efekt v této třídě */
+  background-image: none;
+  background-clip: unset;
+  background-origin: unset;
+  border: unset;
 }
 
 button {
@@ -33,6 +38,14 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
+  /* background-color: @surface2; */
+  /* border-radius: 10px; */
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#custom-updates:hover {
   /* background-color: @surface2; */
   /* border-radius: 10px; */
   background: inherit;
@@ -173,6 +186,35 @@ button:hover {
   background-color: @bg;
   border-radius: 15px;
 }
+
+
+
+
+/* Custom border */
+.modules-right {
+  background: transparent;
+  /* padding: 0.5rem 1rem; */
+  background-image: linear-gradient(90deg, @bg, @bg),
+    linear-gradient(150deg, rgba(102, 204, 255, 1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(102, 204, 255, 1) 100%);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+}
+
+.modules-left,
+.modules-center {
+  background: transparent;
+  /* padding: 0.5rem 1rem; */
+  background-image: linear-gradient(90deg, @bg, @bg),
+    linear-gradient(150deg, rgba(102, 204, 255, 1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(102, 204, 255, 1) 100%);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+}
+
+
+
+
 
 .modules-right {
   padding: 0 10px;
