@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Define the list of options
+options=" Full Screen\n󰘔 Window\n󰩬 Select"
+
+# Display the options in Rofi and store the chosen option
+chosen=$(echo -e "$options" | rofi -dmenu -i -theme screenshotmenu -p "  Screenshotmenu")
+
+# Execute the corresponding hyprshot command based on the selection
+case "$chosen" in
+    " Full Screen")
+        hyprshot -m output
+        ;;
+    "󰘔 Window")
+        hyprshot -m window
+        ;;
+    "󰩬 Select")
+        hyprshot -m region
+        ;;
+    *)
+        # Exit if no option was selected
+        exit 1
+        ;;
+esac

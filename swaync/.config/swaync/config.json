@@ -57,6 +57,14 @@
           "command": "/home/vasek/.local/bin/powermenu"
         },
         {
+          "label": "",
+          "command": "/home/vasek/.local/bin/screenshotmenu"
+        },
+        {
+          "label": "",
+          "command": "hyprpicker -a"
+        },
+        {
           "label": "",
           "command": "spotify-launcher"
         },
@@ -67,14 +75,6 @@
         {
           "label": "",
           "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-        },
-        {
-          "label": "",
-          "command": "hyprshot -m output -m DP-1 -o /home/vasek/Pictures/screenshots"
-        },
-        {
-          "label": "",
-          "command": "hyprpicker -a"
         }
       ]
     }

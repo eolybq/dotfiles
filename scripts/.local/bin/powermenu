@@ -1,8 +1,18 @@
-chosen=$(printf "⏻ Shutdown\n⟳ Reboot\n🔒 Lockscreen" | rofi -dmenu -i -theme powermenu)
+chosen=$(printf "⏻ Shutdown\n⟳ Reboot\n󰍃 Logout\n🔒 Lockscreen\n Zen mode" | rofi -dmenu -i -theme powermenu -p " 󰐦 Powermenu")
 
 case "$chosen" in
   "⏻ Shutdown") poweroff ;;
   "⟳ Reboot") reboot ;;
+  "󰍃 Logout") hyprctl dispatch exit ;;
   "🔒 Lockscreen") hyprlock ;;
+  " Zen mode")
+    # Zjistí aktuální stav dim_inactive a přepne jej
+    current_state=$(hyprctl getoption decoration:dim_inactive)
+    if [[ "$current_state" == *"int: 1"* ]]; then
+        hyprctl keyword decoration:dim_inactive no
+    else
+        hyprctl keyword decoration:dim_inactive yes
+    fi
+    ;;
   *) exit 1 ;;
 esac
