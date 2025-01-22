@@ -149,8 +149,9 @@
         "format": "{} ",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
+        "tooltip-format": "{} Updates available",
         "interval": 3600,
-        "on-click": "kitty -e yay -Syu && notify-send 'The system has been updated' "
+        "on-click": "kitty -e yay -Syu && notify-send -i preferences-system 'Yay' 'The system has been updated' "
     },
 
   "privacy": {

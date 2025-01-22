@@ -129,6 +129,8 @@ button:hover {
 #bluetooth,
 #custom-gpu-temp,
 #custom-notification,
+#custom-updates,
+#privacy,
 #pulseaudio {
   padding: 0 10px;
   transition: all 0.3s ease;
@@ -191,8 +193,19 @@ button:hover {
 
 
 /* Custom border */
+@keyframes move-border {
+    0% {
+        background-size: 200% 100%; /* Začátek s větším gradientem */
+        background-position: 0 0;   /* Počáteční pozice */
+    }
+    100% {
+        background-size: 200% 100%; /* Gradient zůstane ve stejné velikosti */
+        background-position: 100% 0; /* Konec s posunutým gradientem */
+    }
+}
+
 .modules-right {
-  background: transparent;
+  /* background: transparent; */
   /* padding: 0.5rem 1rem; */
   background-image: linear-gradient(90deg, @bg, @bg),
     linear-gradient(150deg, rgba(102, 204, 255, 1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(102, 204, 255, 1) 100%);
@@ -203,13 +216,14 @@ button:hover {
 
 .modules-left,
 .modules-center {
-  background: transparent;
+  /* background: transparent; */
   /* padding: 0.5rem 1rem; */
   background-image: linear-gradient(90deg, @bg, @bg),
     linear-gradient(150deg, rgba(102, 204, 255, 1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(102, 204, 255, 1) 100%);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
+  /* animation: move-border 5s linear infinite; */
 }
 
 
