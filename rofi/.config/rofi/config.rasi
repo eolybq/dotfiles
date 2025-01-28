@@ -1,14 +1,16 @@
 configuration {
-    modes: "window,run,ssh,drun,calc,emoji";
+    modes: "window,run,ssh,drun,combi,filebrowser";
     sorting-method: "normal";
     show-icons:true;
-    icon-theme: "candy-icons";
+    icon-theme: "Tela-circle-dracula";
     matching: "regex";
     // drun-match-fields: "name";
     display-run: "Run:";
     display-ssh: "SSH:";
     display-drun: " ";
     display-window: " ";
+    display-filebrowser: " ";
+    display-clipboard: " ";
     display-calc: " ";
     terminal: "/usr/bin/kitty";
 }
@@ -16,7 +18,7 @@ configuration {
 @theme "breeze"
 
 * {
-    font: "JetBrainsMono NFM ExtraBold 13";
+    font: "JetBrainsMono NFM ExtraBold 14";
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -106,7 +108,7 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:           1em;
+    size:           1.1em;
     vertical-align: 0.5;
 }
 

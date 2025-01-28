@@ -2,11 +2,13 @@
   "hyprland/window": {
     "format": "{}",
     "icon": true,
+    "icon-size": 30,
     "max-length": 35,
     "rewrite": {
       "(.*) — Mozilla Firefox": "$1",
       "(.*) — Zen Browser": "$1",
       "(.*) - Visual Studio Code": "$1",
+      "(.*) - Cursor": "$1",
     },
     "separate-outputs": true,
   },
@@ -20,14 +22,11 @@
     },
     "sort-by-number": true,
     "persistent-workspaces": {
-      // "*": 4, // 5 workspaces by default on every monitor
       "DP-1": [
         1,
         2,
         3,
         4
-        // 5,
-        // 6
       ],
       "HDMI-A-1": [
         5,

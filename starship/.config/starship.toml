@@ -1,3 +1,5 @@
+command_timeout = 2000  # Timeout v milisekundách (zvýš třeba na 2 sekundy)
+
 [aws]
 symbol = "  "
 
