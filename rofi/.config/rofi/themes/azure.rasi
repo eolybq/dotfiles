@@ -1,0 +1,24 @@
+// github.com/pahasara/HyprDots
+
+* {
+  bg0:    #12121288; //window
+  bg1:    #00000066; //input
+  bg2:    #0000000F; //selected
+  bg3:    #424547; //windowBorder
+  bg4:    #0000009F; //window
+  fg0:    #DEDEDE;   //main
+  fg1:    #0000000F;
+  fg2:    #33CCFF;   //selected
+  fg3:    #242428;   //inputBorder
+
+  black   : #000000;
+  red     : #F7768E;
+  green   : #9ECE6A;
+  yellow  : #E0AF68;
+  blue    : #7AA2F7;
+  magenta : #9AAECC;
+  cyan    : #4ABAEF;
+
+  accent: @cyan;
+  urgent: @yellow;
+}

@@ -4,7 +4,7 @@
 options=" Full Screen\n󰘔 Window\n󰩬 Select"
 
 # Display the options in Rofi and store the chosen option
-chosen=$(echo -e "$options" | rofi -dmenu -i -theme screenshotmenu -p "  Screenshotmenu")
+chosen=$(echo -e "$options" | rofi -dmenu -i -p " ")
 
 # Execute the corresponding hyprshot command based on the selection
 case "$chosen" in

@@ -1,4 +1,6 @@
-chosen=$(printf "⏻ Shutdown\n⟳ Reboot\n󰍃 Logout\n🔒 Lockscreen\n Zen mode" | rofi -dmenu -i -theme powermenu -p " 󰐦 Powermenu")
+#!/bin/bash
+
+chosen=$(printf "⏻ Shutdown\n⟳ Reboot\n󰍃 Logout\n🔒 Lockscreen\n Zen mode" | rofi -dmenu -i -p "󰐦 ")
 
 case "$chosen" in
   "⏻ Shutdown") poweroff ;;
