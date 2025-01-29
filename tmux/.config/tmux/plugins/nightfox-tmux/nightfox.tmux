@@ -63,7 +63,7 @@ main() {
   # clock
   set clock-mode-style 24
 
-  set status-left "#{?client_prefix,#[bg=$thm_red],#[bg=$thm_green]}#[fg=$thm_bg,bold] #S #{?client_prefix,#[fg=$thm_red],#[fg=$thm_green]}#[bg=$thm_bg]"
+  set status-left "#{?client_prefix,#[bg=$thm_red],#[bg=$thm_blue]}#[fg=$thm_bg,bold] #S #{?client_prefix,#[fg=$thm_red],#[fg=$thm_blue]}#[bg=$thm_bg]"
 
   setw window-status-format "#[fg=$thm_cyan,bg=$thm_bg]#[fg=$thm_bg,bg=$thm_cyan] #I #[fg=$thm_cyan,bg=$thm_gray] #W #[fg=$thm_gray,bg=$thm_bg]"
 
