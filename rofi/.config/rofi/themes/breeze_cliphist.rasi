@@ -1,15 +1,15 @@
 // github.com/pahasara/HyprDots
 
 * {
-  bg0:    #12121288; //window
-  bg1:    #00000066; //input
-  bg2:    #0000000F; //selected
-  bg3:    #424547; //windowBorder
-  bg4:    #0000009F; //window
+  bg0:    #0000008F; //window
+  bg1:    #2A2C2F99; //input
+  bg2:    #0000001F; //selected
+  bg3:    #42CCFF; //windowBorder
+  bg4:    #000000DF; //window
   fg0:    #DEDEDE;   //main
   fg1:    #0000000F;
-  fg2:    #33CCFF;   //selected
-  fg3:    #242428;   //inputBorder
+  fg2:    #33BBFF;   //selected
+  fg3:    #282830;   //inputBorder
 
   black   : #000000;
   red     : #F7768E;
@@ -36,7 +36,7 @@
 
 window {
     location:       center;
-    width:          305;
+    width:          505;
     border-radius:  15px;
 
     // border: 2px;
