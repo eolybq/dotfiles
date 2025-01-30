@@ -8,35 +8,43 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval "$(starship init zsh)"
 
+# eval "$(starship init zsh)"
 
 # Get the current hour in 24-hour format
-hour=$(date +"%H")
+# hour=$(date +"%H")
+#
+# # Define time ranges
+# morning_start=5    # 5 AM
+# morning_end=11     # 11 AM
+# afternoon_start=12 # 12 PM
+# afternoon_end=17   # 5 PM
+#
+#
+# # Check the time of day and print a message
+# if [ "$hour" -ge "$morning_start" ] && [ "$hour" -le "$morning_end" ]; then
+#     greeting="Good morning"
+# elif [ "$hour" -ge "$afternoon_start" ] && [ "$hour" -le "$afternoon_end" ]; then
+#     greeting="Good afternoon"
+# else
+#     greeting="Good evening"
+# fi
+#
+# echo " ___"
+# echo "|[_]|"
+# echo "|+ ;|  ✦ $greeting!✦ " # string interpolation
+# echo "\`---'"
 
-# Define time ranges
-morning_start=5    # 5 AM
-morning_end=11     # 11 AM
-afternoon_start=12 # 12 PM
-afternoon_end=17   # 5 PM
-
-
-# Check the time of day and print a message
-if [ "$hour" -ge "$morning_start" ] && [ "$hour" -le "$morning_end" ]; then
-    greeting="Good morning"
-elif [ "$hour" -ge "$afternoon_start" ] && [ "$hour" -le "$afternoon_end" ]; then
-    greeting="Good afternoon"
-else
-    greeting="Good evening"
-fi
-
-echo " ___"
-echo "|[_]|"
-echo "|+ ;|  ✦ $greeting!✦ " # string interpolation
-echo "\`---'"
 
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+export HYPRLAND_CONFIG=$HOME/.config/hypr/hyprland.conf
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/usr/bin
+
+export EDITOR=nvim
 
 
 # >>> conda initialize >>>
@@ -55,14 +63,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-export HYPRLAND_CONFIG=$HOME/.config/hypr/hyprland.conf
-
-export PATH="$HOME/.local/bin:$PATH"
-export PATH=$PATH:/usr/bin
-
-export EDITOR=nvim
-
-
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
@@ -73,7 +73,7 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in Powerlevel10k
-# zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -112,6 +112,7 @@ HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
+setopt globdots
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -174,6 +175,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+alias vim="nvim"
 alias ls="eza --color=always --all --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
