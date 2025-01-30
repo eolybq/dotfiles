@@ -5,8 +5,9 @@ return {
 			local opts = {
 				external_term = "tmux split-window -h -l 45 -d",
 				-- external_term = "default",
-				-- R_app = "radian",
+				R_app = "radian",
 				R_cmd = "R",
+				bracketed_paste = true,
 				silent_term = true,
 				auto_quit = true,
 				auto_start = "always",
