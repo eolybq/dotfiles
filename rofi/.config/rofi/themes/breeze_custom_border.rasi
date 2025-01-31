@@ -1,22 +1,30 @@
-configuration {
-    modes: "window,run,ssh,drun,calc,emoji";
-    sorting-method: "normal";
-    show-icons:true;
-    icon-theme: "candy-icons";
-    matching: "regex";
-    // drun-match-fields: "name";
-    display-run: "Run:";
-    display-ssh: "SSH:";
-    display-drun: " ";
-    display-window: " ";
-    display-calc: " ";
-    terminal: "/usr/bin/kitty";
-}
-
-@theme "breeze"
+// github.com/pahasara/HyprDots
 
 * {
-    font: "JetBrainsMono NFM ExtraBold 13";
+  bg0:    #0000008F; //window
+  bg1:    #2A2C2F99; //input
+  bg2:    #0000001F; //selected
+  bg3:    #42CCFF; //windowBorder
+  bg4:    #000000DF; //window
+  fg0:    #DEDEDE;   //main
+  fg1:    #0000000F;
+  fg2:    #33BBFF;   //selected
+  fg3:    #282830;   //inputBorder
+
+  black   : #000000;
+  red     : #F7768E;
+  green   : #9ECE6A;
+  yellow  : #E0AF68;
+  blue    : #7AA2F7;
+  magenta : #9AAECC;
+  cyan    : #4ABAEF;
+
+  accent: @cyan;
+  urgent: @yellow;
+}
+
+* {
+    font: "JetBrainsMono NFM ExtraBold 14";
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -28,16 +36,21 @@ configuration {
 
 window {
     location:       center;
-    width:          305;
+    width:          285;
     border-radius:  15px;
 
-    border: 2px;
+    // border: 2px;
     border-color: @bg3;
     background-color:   @bg4;
+
+  background-image: linear-gradient(45deg, rgb(102, 204, 255), rgb(0,0,0), rgb(0,0,0), rgb(102, 204, 255));
+  padding: 2px;
 }
 
 mainbox {
     padding:    12px;
+    background-color:   @bg4;
+    border-radius:  15px;
 }
 
 inputbar {
@@ -101,7 +114,7 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:           1em;
+    size:           1.1em;
     vertical-align: 0.5;
 }
 
