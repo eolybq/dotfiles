@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = ","
 -- So leader doesnt move cursor
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>')
 
