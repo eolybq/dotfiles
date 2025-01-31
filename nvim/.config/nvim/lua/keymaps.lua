@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>')
+
+vim.keymap.set('t', '<Esc>', "<C-\\><C-n>")
 
 vim.keymap.set("v", "<C-c>", '"+y') -- Copy
 vim.keymap.set("n", "<C-v>", '"+p') -- Paste normal mode

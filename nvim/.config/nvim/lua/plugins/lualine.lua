@@ -7,18 +7,20 @@ return {
 				theme = "ayu_dark",
 				-- section_separators = { left = "", right = "" },
 				section_separators = "",
-				component_separators = "|"
+				component_separators = "|",
 			},
 			sections = {
+-- lualine_a = {
+--         { 'mode', fmt = function(str) return str:sub(1,1) end } },
 				lualine_x = {
 					{
 						require("noice").api.statusline.mode.get,
 						cond = require("noice").api.statusline.mode.has,
 						color = { fg = "#ff9e64" },
 					},
-				"encoding",
-				"fileformat",
-				"filetype",
+					"encoding",
+					"fileformat",
+					"filetype",
 				},
 			},
 		})
