@@ -176,7 +176,7 @@ function y() {
 }
 
 alias vim="nvim"
-alias ls="eza --color=always --all --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --color=always --all --grid --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
 alias grep='grep --color=auto'
