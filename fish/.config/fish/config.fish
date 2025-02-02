@@ -1,5 +1,17 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+
+
+  function fish_greeting
+      set capitalized (string sub -l 1 $USER | string upper)(string sub -s 2 $USER)
+  
+      echo " ___"
+      echo "|[_]|"
+      echo "|+ ;|  ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ "
+      echo "`---'"
+  end
+
+
   if not type -q fisher
     curl -sL https://git.io/fisher | fish
   end
@@ -25,7 +37,7 @@ if status is-interactive
   fzf_configure_bindings --directory=\ct --history= 
 
   set fzf_fd_opts --hidden --exclude .git --max-depth 5
-  # set fzf_preview_dir_cmd eza --all --color=always
+  set fzf_preview_dir_cmd eza --all --color=always
 
 
   abbr -a ls eza --color=always --all --grid --long --git --no-filesize --icons=always --no-time --no-user --no-permissions
@@ -35,10 +47,11 @@ if status is-interactive
 
 end
 
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/vasek/miniconda3/bin/conda
-    eval /home/vasek/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+    status is-interactive && eval /home/vasek/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 else
     if test -f "/home/vasek/miniconda3/etc/fish/conf.d/conda.fish"
         . "/home/vasek/miniconda3/etc/fish/conf.d/conda.fish"
@@ -47,6 +60,7 @@ else
     end
 end
 # <<< conda initialize <<<
+
 
 set -x HYPRLAND_CONFIG $HOME/.config/hypr/hyprland.conf
 set -x PATH $HOME/.local/bin $PATH
