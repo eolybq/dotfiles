@@ -3,11 +3,13 @@ vim.g.maplocalleader = ","
 -- So leader doesnt move cursor
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>')
 
-vim.keymap.set("n", "<leader>s", ":w<CR>")
-vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
+
 
 -- Clear search
-vim.keymap.set("n", "<leader>l", ":nohlsearch<CR>")
+vim.keymap.set("n", "<leader>l", ":nohlsearch<CR>", { silent = true })
+
 
 -- Exit term mode esc
 vim.keymap.set('t', '<Esc>', "<C-\\><C-n>")
