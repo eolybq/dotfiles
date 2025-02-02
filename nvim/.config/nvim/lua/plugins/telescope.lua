@@ -23,6 +23,7 @@ return {
 						"yarn.lock",
 						"lazy%-lock.json",
 						"package%-lock.json",
+            "miniconda3/*",
 						-- "%.o",
 						-- "%.a",
 						-- "%.out",

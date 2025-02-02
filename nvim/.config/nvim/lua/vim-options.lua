@@ -11,4 +11,12 @@ vim.o.termguicolors = true
 vim.o.shell = "/bin/zsh"
 
 -- Highlight on yank
-vim.cmd("au TextYankPost * lua vim.highlight.on_yank {on_visual = false}")
+vim.cmd("au TextYankPost * lua vim.highlight.on_yank {on_visual = true}")
+
+-- Term mode no numbers
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+  end,
+})

@@ -3,6 +3,8 @@ vim.g.maplocalleader = ","
 -- So leader doesnt move cursor
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>')
 
+vim.keymap.set("n", "<leader>s", ":w<CR>")
+
 -- Clear search
 vim.keymap.set("n", "<leader>l", ":nohlsearch<CR>")
 

@@ -81,7 +81,7 @@ return {
           },
           {
             action = function()
-              vim.cmd("cd ~/.config/nvim | Neotree toggle")
+              vim.cmd("cd ~/.config/nvim")
             end,
             desc = " Config",
             icon = " ",
