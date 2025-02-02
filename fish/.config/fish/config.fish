@@ -43,7 +43,9 @@ if status is-interactive
   abbr -a ls eza --color=always --all --grid --long --git --no-filesize --icons=always --no-time --no-user --no-permissions
   abbr -a code code --enable-features=UseOzonePlatform --ozone-platform=wayland
   abbr -a grep grep --color=auto
+  abbr -a cat bat --color=always
   abbr -a nv nvim
+  abbr -a lg lazygit
 
 
 end
