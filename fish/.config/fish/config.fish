@@ -5,10 +5,10 @@ if status is-interactive
   function fish_greeting
       set capitalized (string sub -l 1 $USER | string upper)(string sub -s 2 $USER)
   
-      echo " ___"
-      echo "|[_]|"
-      echo "|+ ;|  ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ "
-      echo "`---'"
+      echo "  ___"
+      echo " |[_]|"
+      echo " |+ ;|  ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ "
+      echo " `---'"
   end
 
 
@@ -43,6 +43,7 @@ if status is-interactive
   abbr -a ls eza --color=always --all --grid --long --git --no-filesize --icons=always --no-time --no-user --no-permissions
   abbr -a code code --enable-features=UseOzonePlatform --ozone-platform=wayland
   abbr -a grep grep --color=auto
+  abbr -a nv nvim
 
 
 end
