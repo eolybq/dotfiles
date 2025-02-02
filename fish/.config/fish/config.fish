@@ -34,10 +34,32 @@ if status is-interactive
 
 
   # fzf --fish | source
+
+  set -gx FZF_DEFAULT_COMMAND fd --hidden --strip-cwd-prefix --exclude .git --exclude miniconda3 --exclude .cargo --exclude .cache
+  set -gx FZF_DEFAULT_OPTS --tmux center
+
+  # set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+  # set -gx FZF_ALT_C_COMMAND fd --type=d --hidden --strip-cwd-prefix --exclude .git
+  
+  # function show_file_or_dir_preview
+  #   if test -d $argv[1]
+  #       eza --tree --color=always $argv[1] | head -n 200
+  #   else
+  #       bat -n --color=always --line-range :500 $argv[1]
+  #   end
+  # end
+
+  # set -gx FZF_CTRL_T_OPTS "--preview 'show_file_or_dir_preview {}'"
+  # set -gx FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
+  
+
+  # fzf.fish
   fzf_configure_bindings --directory=\ct --history= 
 
-  set fzf_fd_opts --hidden --exclude .git --max-depth 5
-  set fzf_preview_dir_cmd eza --all --color=always
+  set -x fzf_fd_opts --hidden --exclude .git --exclude miniconda3 --exclude .cargo --exclude .cache
+  set -x fzf_preview_dir_cmd eza --tree --color=always | head -n 200
+  set -x fzf_preview_file_cmd bat -n --color=always --line-range :500
+
 
 
   abbr -a ls eza --color=always --all --grid --long --git --no-filesize --icons=always --no-time --no-user --no-permissions
@@ -46,6 +68,7 @@ if status is-interactive
   abbr -a cat bat --color=always
   abbr -a nv nvim
   abbr -a lg lazygit
+  abbr -a tx tmux
 
 
 end
