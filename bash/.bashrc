@@ -6,7 +6,11 @@
 [[ $- != *i* ]] && return
 
 PS1='[\u@\h \W]\$ '
-# export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
+
+
+export HYPRLAND_CONFIG=$HOME/.config/hypr/hyprland.conf
+export PATH="$HOME/.local/bin:$PATH"
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -23,10 +27,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export HYPRLAND_CONFIG=$HOME/.config/hypr/hyprland.conf
-
 
 eval "$(starship init bash)"
+
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)" 
@@ -63,12 +66,8 @@ _fzf_compgen_dit() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
+
 alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
-
 alias ls="eza --color=always --all --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
-
 alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
-
 alias grep='grep --color=auto'
-
-export PATH="$HOME/.local/bin:$PATH"
