@@ -13,8 +13,7 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
-        'hrsh7th/cmp-cmdline',
-        "R-nvim/cmp-r",
+        "hrsh7th/cmp-cmdline",
         -- 		"github/copilot.vim",
       },
     },
@@ -29,10 +28,12 @@ return {
             require("luasnip").lsp_expand(args.body)
           end,
         },
+
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
+
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -43,49 +44,50 @@ return {
           ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
           ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
         }),
+
         sources = cmp.config.sources({
-          { name = "nvim_lsp", priority = 750,    max_item_count = 10 },
+          { name = "nvim_lsp", max_item_count = 10 },
           { name = "luasnip",  max_item_count = 5 },
-          { name = "buffer",   priority = 500,    keyword_length = 4, max_item_count = 8 },
+          { name = "buffer",   keyword_length = 4, max_item_count = 8 },
           { name = "path",     keyword_length = 2 },
-          { name = "codeium", priority = 1000 }
+          { name = "codeium" },
+        }),
+
+        -- formatting = {
+        --   format = function(entry, vim_item)
+        --     -- Přidejte označení pro každý zdroj
+        --     vim_item.menu = ({
+        --       nvim_lsp = "[LSP]",
+        --       luasnip = "[Snippet]",
+        --       buffer = "[Buffer]",
+        --       path = "[Path]",
+        --       codeium = "[Codeium]",
+        --     })[entry.source.name] or entry.source.name
+        --     return vim_item
+        --   end,
+        -- },
+      })
+
+      cmp.setup.cmdline({ "/", "?" }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = "buffer" },
+        },
+      })
+      -- `:` cmdline setup.
+      cmp.setup.cmdline(":", {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = "path" },
+        }, {
+          {
+            name = "cmdline",
+            option = {
+              ignore_cmds = { "Man", "!" },
+            },
+          },
         }),
       })
-        formatting = {
-          format = function(entry, vim_item)
-            -- Přidejte označení pro každý zdroj
-            vim_item.menu = ({
-              nvim_lsp = "[LSP]",
-              luasnip = "[Snippet]",
-              buffer = "[Buffer]",
-              path = "[Path]",
-              codeium = "[Codeium]",
-            })[entry.source.name] or entry.source.name
-            return vim_item
-          end
-        }
-
-    cmp.setup.cmdline('/', {
-      mapping = cmp.mapping.preset.cmdline(),
-      sources = {
-        { name = 'buffer' }
-      }
-    })
-    -- `:` cmdline setup.
-    cmp.setup.cmdline(':', {
-      mapping = cmp.mapping.preset.cmdline(),
-      sources = cmp.config.sources({
-        { name = 'path' }
-      }, {
-        {
-          name = 'cmdline',
-          option = {
-            ignore_cmds = { 'Man', '!' }
-          }
-        }
-      })
-    })
-
     end,
   },
 }
