@@ -9,6 +9,7 @@ configuration {
     display-ssh: "SSH:";
     display-drun: " ";
     display-window: " ";
+    window-format: "{t}";
     display-filebrowser: " ";
     display-clipboard: " ";
     display-calc: " ";
