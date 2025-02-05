@@ -74,7 +74,6 @@ if status is-interactive
 
   # TIDE prompt config
   set -g tide_left_prompt_frame_enabled true
-  set -g tide_left_prompt_items context $tide_left_prompt_items
   set -g tide_left_prompt_prefix " "
 
 end
