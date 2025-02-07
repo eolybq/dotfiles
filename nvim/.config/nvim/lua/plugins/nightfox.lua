@@ -6,7 +6,7 @@ return {
 			require("nightfox").setup({
 				options = {
 					-- Příklad konfigurace
-					transparent = false, -- Nepoužívej průhledné pozadí
+					transparent = true, -- Nepoužívej průhledné pozadí
 					styles = {
 						comments = "italic", -- Komentáře budou kurzívou
 						keywords = "bold", -- Klíčová slova budou tučně

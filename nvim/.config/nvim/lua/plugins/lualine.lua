@@ -33,9 +33,10 @@ return {
             color = { fg = "#ff9e64" },
           },
           "encoding",
-          "fileformat",
-          -- "filetype",
-          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 }},
+          -- "fileformat",
+          { "fileformat", symbols = { unix = "" }},
+          "filetype",
+          -- { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 }},
         },
       },
       inactive_sections = {

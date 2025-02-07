@@ -144,7 +144,8 @@ button:hover,
 .modules-right,
 .modules-left,
 .modules-center {
-  background: transparent;
+  /* background: transparent; */
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
 }
 
