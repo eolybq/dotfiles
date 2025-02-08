@@ -3,10 +3,69 @@ local config = {}
 
 config.default_prog = { "/usr/bin/fish" }
 
-config.font = wezterm.font("JetBrainsMono NFM SemiBold")
+config.font = wezterm.font("JetBrainsMono NFM", { weight = "DemiBold" })
+config.font_size = 18
 
 -- config.color_scheme = 'carbonfox'
 config.color_scheme = 'terafox'
+
+config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
+config.show_new_tab_button_in_tab_bar = false
+config.use_fancy_tab_bar = false
+
+
+-- Tabs use whole tab bar
+config.tab_max_width = 999
+local function get_max_cols(window)
+  local tab = window:active_tab()
+  local cols = tab:get_size().cols
+  return cols
+end
+
+wezterm.on(
+  'window-config-reloaded',
+  function(window)
+    wezterm.GLOBAL.cols = get_max_cols(window)
+  end
+)
+
+wezterm.on(
+  'window-resized',
+  function(window, pane)
+    wezterm.GLOBAL.cols = get_max_cols(window)
+  end
+)
+
+wezterm.on(
+  'format-tab-title',
+  function(tab, tabs, panes, config, hover, max_width)
+    local title = tab.active_pane.title
+    local full_title = '[' .. tab.tab_index + 1 .. '] ' .. title
+    local pad_length = (wezterm.GLOBAL.cols // #tabs - #full_title) // 2
+    if pad_length * 2 + #full_title > max_width then
+      pad_length = (max_width - #full_title) // 2
+    end
+    return string.rep(' ', pad_length) .. full_title .. string.rep(' ', pad_length)
+  end
+)
+
+
+
+
+
+-- config.window_frame = {
+--   active_titlebar_bg = '#000000',
+-- }
+
+config.default_cursor_style = "BlinkingBar"
+config.cursor_blink_rate = 800
+config.cursor_blink_ease_in = "Linear"
+config.cursor_blink_ease_out = "Linear"
+
+config.keys = {
+  { key = 'Space', mods = 'CTRL', action = wezterm.action.ShowLauncher },
+}
 
 local dimmer = { brightness = 0.1 }
 config.background = {
@@ -28,80 +87,7 @@ config.background = {
     repeat_y = "NoRepeat",   -- Zabrání opakování obrázku vodorovně
     repeat_x = "NoRepeat",   -- Zabrání opakování obrázku svisle
     hsb = dimmer,
-  },
-}
-
-config.colors = {
-  tab_bar = {
-    -- The color of the strip that goes along the top of the window
-    -- (does not apply when fancy tab bar is in use)
-    background = '#0b0022',
-
-    -- The active tab is the one that has focus in the window
-    active_tab = {
-      -- The color of the background area for the tab
-      bg_color = '#2b2042',
-      -- The color of the text for the tab
-      fg_color = '#c0c0c0',
-
-      -- Specify whether you want "Half", "Normal" or "Bold" intensity for the
-      -- label shown for this tab.
-      -- The default is "Normal"
-      intensity = 'Normal',
-
-      -- Specify whether you want "None", "Single" or "Double" underline for
-      -- label shown for this tab.
-      -- The default is "None"
-      underline = 'None',
-
-      -- Specify whether you want the text to be italic (true) or not (false)
-      -- for this tab.  The default is false.
-      italic = false,
-
-      -- Specify whether you want the text to be rendered with strikethrough (true)
-      -- or not for this tab.  The default is false.
-      strikethrough = false,
-    },
-
-    -- Inactive tabs are the tabs that do not have focus
-    inactive_tab = {
-      bg_color = '#1b1032',
-      fg_color = '#808080',
-
-      -- The same options that were listed under the `active_tab` section above
-      -- can also be used for `inactive_tab`.
-    },
-
-    -- You can configure some alternate styling when the mouse pointer
-    -- moves over inactive tabs
-    inactive_tab_hover = {
-      bg_color = '#3b3052',
-      fg_color = '#909090',
-      italic = true,
-
-      -- The same options that were listed under the `active_tab` section above
-      -- can also be used for `inactive_tab_hover`.
-    },
-
-    -- The new tab button that let you create new tabs
-    new_tab = {
-      bg_color = '#1b1032',
-      fg_color = '#808080',
-
-      -- The same options that were listed under the `active_tab` section above
-      -- can also be used for `new_tab`.
-    },
-
-    -- You can configure some alternate styling when the mouse pointer
-    -- moves over the new tab button
-    new_tab_hover = {
-      bg_color = '#3b3052',
-      fg_color = '#909090',
-      italic = true,
-
-      -- The same options that were listed under the `active_tab` section above
-      -- can also be used for `new_tab_hover`.
-    },
+    opacity = 0.7
   },
 }
 
