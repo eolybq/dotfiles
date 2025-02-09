@@ -7,6 +7,9 @@ vim.keymap.set("n", "<leader>s", "<cmd>w<cr><esc>", { desc = "Save File" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
 
 
+vim.api.nvim_set_keymap('n', '<C-w>"', ':split<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-w>%', ':vsplit<CR>', { noremap = true, silent = true })
+
 -- Clear search
 vim.keymap.set("n", "<leader>l", ":nohlsearch<CR>", { silent = true })
 
