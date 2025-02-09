@@ -1,7 +1,18 @@
 local wezterm = require("wezterm")
 local config = {}
 
-config.default_prog = { "/usr/bin/fish" }
+config.default_prog = {
+  "/usr/bin/fish",
+  -- "-c",
+  -- [[
+  --   if type -q tmux
+  --       tmux attach || tmux new
+  --   else
+  --       exec fish
+  --   end
+  -- ]],
+}
+
 
 config.font = wezterm.font("JetBrainsMono NFM", { weight = "DemiBold" })
 config.font_size = 18
@@ -60,18 +71,19 @@ wezterm.on(
 
 config.default_cursor_style = "BlinkingBar"
 config.cursor_blink_rate = 800
-config.cursor_blink_ease_in = "Linear"
-config.cursor_blink_ease_out = "Linear"
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
 
 config.keys = {
-  { key = 'Space', mods = 'CTRL', action = wezterm.action.ShowLauncher },
+  { key = 'b', mods = 'CTRL', action = wezterm.action.ShowLauncher },
 }
 
 local dimmer = { brightness = 0.1 }
 config.background = {
   {
     source = {
-      Color = "black", -- Nastaví pevné černé pozadí
+      -- Color = "black", -- Nastaví pevné černé pozadí
+      Color = "#152528"
     },
     height = "100%",
     width = "100%",

@@ -11,6 +11,11 @@ return {
 		--   `nvim-notify` is only needed, if you want to use the notification view.
 		--   If not available, we use `mini` as the fallback
 		"rcarriga/nvim-notify",
+    config = function()
+		require("notify").setup({
+			background_colour = "#000000",
+		})
+    end
 	},
 	config = function()
 		require("noice").setup({
@@ -21,8 +26,8 @@ return {
 					["vim.lsp.util.stylize_markdown"] = true,
 					["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
 				},
-        signature = { enabled = false },
-        -- hover = { enabled = false },
+				signature = { enabled = false },
+				-- hover = { enabled = false },
 			},
 
 			vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" }),

@@ -18,6 +18,8 @@ if status is-interactive
 
 
   bind \e\[3\;5~ kill-word
+  bind \eu backward-kill-line
+  bind \ek kill-line
 
 
   function y
