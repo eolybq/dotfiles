@@ -76,6 +76,10 @@ config.cursor_blink_ease_out = "Constant"
 
 config.keys = {
   { key = 'b', mods = 'CTRL', action = wezterm.action.ShowLauncher },
+  { key = 'l', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Right') },
+  { key = 'k', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Up') },
+  { key = 'j', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Down') },
+  { key = 'h', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Left') },
 }
 
 local dimmer = { brightness = 0.1 }
