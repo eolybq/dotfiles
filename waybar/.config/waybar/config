@@ -1,52 +1,58 @@
 [
-  {
-    "layer": "top",
-    "margin-top": 10,
-    "margin-left": 10,
-    "margin-right": 10,
-    "height": 35,
-    "output": [
-      "DP-1"
-    ],
-    "include": [
-      "~/.config/waybar/default-modules.json",
-    ],
-    "modules-left": [
-      "custom/logo",
-      "hyprland/workspaces",
-    ],
-    "modules-center": [
-      "hyprland/window",
-    ],
-    "modules-right": [
-      "privacy",
-      "custom/updates",
-      "group/hardware",
-      "pulseaudio",
-      "bluetooth",
-      "network",
-      "custom/notification",
-      "clock",
-    ],
-  },
-  {
-    "layer": "top",
-    "margin-top": 10,
-    "margin-left": 10,
-    "margin-right": 10,
-    "height": 35,
-    "output": [
-      "HDMI-A-1"
-    ],
-    "include": [
-      "~/.config/waybar/default-modules.json",
-    ],
-    "modules-left": [
-      "custom/logo",
-      "hyprland/workspaces",
-    ],
-    "modules-center": [
-      "hyprland/window",
-    ],
-  }
+    {
+        "layer": "top",
+        "margin-top": 8,
+        "margin-left": 10,
+        "margin-right": 10,
+        "height": 35,
+        "output": [
+            "DP-1"
+        ],
+        "include": [
+            "~/.config/waybar/default-modules.json",
+        ],
+        "modules-left": [
+            "custom/logo",
+            "hyprland/workspaces",
+        ],
+        "modules-center": [
+            "hyprland/window",
+        ],
+        "modules-right": [
+            "custom/updates",
+            "privacy",
+            "cpu",
+            "memory",
+            "custom/gpu-temp",
+            // "group/hardware",
+            "pulseaudio",
+            "bluetooth",
+            "network",
+            "custom/notification",
+            "clock",
+        ],
+    },
+    {
+        "layer": "top",
+        "margin-top": 8,
+        "margin-left": 10,
+        "margin-right": 10,
+        "height": 35,
+        "output": [
+            "HDMI-A-1"
+        ],
+        "include": [
+            "~/.config/waybar/default-modules.json",
+        ],
+        "modules-left": [
+            "custom/logo",
+            "hyprland/workspaces",
+        ],
+        "modules-center": [
+            "hyprland/window",
+        ],
+        "modules-right": [
+            "clock",
+        ],
+    }
 ]
