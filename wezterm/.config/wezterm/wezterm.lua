@@ -15,7 +15,7 @@ config.default_prog = {
 
 
 config.font = wezterm.font("JetBrainsMono NFM", { weight = "DemiBold" })
-config.font_size = 18
+config.font_size = 19
 
 -- config.color_scheme = 'carbonfox'
 config.color_scheme = 'terafox'

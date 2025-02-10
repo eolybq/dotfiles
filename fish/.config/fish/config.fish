@@ -2,13 +2,18 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
 
+  # function fish_greeting
+  #     set capitalized (string sub -l 1 $USER | string upper)(string sub -s 2 $USER)
+  # 
+  #     echo "  ___"
+  #     echo " |[_]|"
+  #     echo " |+ ;|  ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ "
+  #     echo " `---'"
+  # end
+
   function fish_greeting
-      set capitalized (string sub -l 1 $USER | string upper)(string sub -s 2 $USER)
-  
-      echo "  ___"
-      echo " |[_]|"
-      echo " |+ ;|  ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ "
-      echo " `---'"
+    set capitalized (string sub -l 1 $USER | string upper)(string sub -s 2 $USER)
+    echo -e "\n ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ \n"
   end
 
 
