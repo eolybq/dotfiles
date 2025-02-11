@@ -20,54 +20,33 @@ config.font_size = 19
 -- config.color_scheme = 'carbonfox'
 config.color_scheme = 'terafox'
 
+local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
+bar.apply_to_config(
+  config,
+  {
+    modules = {
+      clock = {
+        enabled = false,
+      },
+      hostname = {
+        enabled = false,
+      },
+      pane = {
+        enabled = false,
+      },
+      workspace = {
+        enabled = false,
+      },
+    },
+  }
+)
+
+
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.show_new_tab_button_in_tab_bar = false
-config.use_fancy_tab_bar = false
+-- config.use_fancy_tab_bar = false
 
-
--- Tabs use whole tab bar
-config.tab_max_width = 999
-local function get_max_cols(window)
-  local tab = window:active_tab()
-  local cols = tab:get_size().cols
-  return cols
-end
-
-wezterm.on(
-  'window-config-reloaded',
-  function(window)
-    wezterm.GLOBAL.cols = get_max_cols(window)
-  end
-)
-
-wezterm.on(
-  'window-resized',
-  function(window, pane)
-    wezterm.GLOBAL.cols = get_max_cols(window)
-  end
-)
-
-wezterm.on(
-  'format-tab-title',
-  function(tab, tabs, panes, config, hover, max_width)
-    local title = tab.active_pane.title
-    local full_title = '[' .. tab.tab_index + 1 .. '] ' .. title
-    local pad_length = (wezterm.GLOBAL.cols // #tabs - #full_title) // 2
-    if pad_length * 2 + #full_title > max_width then
-      pad_length = (max_width - #full_title) // 2
-    end
-    return string.rep(' ', pad_length) .. full_title .. string.rep(' ', pad_length)
-  end
-)
-
-
-
-
-
--- config.window_frame = {
---   active_titlebar_bg = '#000000',
--- }
 
 config.default_cursor_style = "BlinkingBar"
 config.cursor_blink_rate = 800
@@ -76,36 +55,34 @@ config.cursor_blink_ease_out = "Constant"
 
 config.keys = {
   { key = 'b', mods = 'CTRL', action = wezterm.action.ShowLauncher },
-  { key = 'l', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Right') },
-  { key = 'k', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Up') },
-  { key = 'j', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Down') },
-  { key = 'h', mods = 'CTRL', action = wezterm.action.ActivatePaneDirection('Left') },
 }
 
-local dimmer = { brightness = 0.1 }
+
+local dimmer = { brightness = 0.05 }
 config.background = {
-  {
-    source = {
-      -- Color = "black", -- Nastaví pevné černé pozadí
-      Color = "#152528"
+    {
+      source = {
+        -- Color = "#152528",
+        Color = "black",
+      },
+      height = "100%",
+      width = "100%",
     },
-    height = "100%",
-    width = "100%",
-  },
-  {
-    source = {
-      File = "/home/vasek/wallpapers/artworks-uGWnvlsCgIYzOJen-nDoj2w-t500x500.jpg",
+    {
+        source = {
+            File = "/home/vasek/wallpapers/mirror.jpg",
+        },
+        horizontal_align = "Center",
+        vertical_align = "Middle", -- Zarovnání k dolnímu okraji
+        width = "Contain",   -- Zachová původní šířku obrázku
+        height = "Contain",  -- Zachová původní výšku
+        repeat_y = "NoRepeat", -- Zabrání opakování obrázku vodorovně
+        repeat_x = "NoRepeat", -- Zabrání opakování obrázku svisle
+        hsb = dimmer,
+        opacity = 1,
     },
-    horizontal_align = "Center",
-    vertical_align = "Middle", -- Zarovnání k dolnímu okraji
-    width = "Contain",       -- Zachová původní šířku obrázku
-    height = "Contain",      -- Zachová původní výšku
-    repeat_y = "NoRepeat",   -- Zabrání opakování obrázku vodorovně
-    repeat_x = "NoRepeat",   -- Zabrání opakování obrázku svisle
-    hsb = dimmer,
-    opacity = 0.7
-  },
 }
+
 
 config.window_padding ={
   left = 3,
