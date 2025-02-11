@@ -1,6 +1,7 @@
 return {
 	{
 		"R-nvim/R.nvim",
+		ft = { "r", "rmd" }, -- Lazy load for R and R Markdown files
 		config = function()
 			local opts = {
 				external_term = "tmux split-window -h -l 45 -d",

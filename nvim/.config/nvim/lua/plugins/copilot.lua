@@ -24,6 +24,7 @@ return {
         dependencies = {
             { "nvim-lua/plenary.nvim"}, -- for curl, log and async functions
         },
+        cmd = "CopilotChat",
         build = "make tiktoken",                   -- Only on MacOS or Linux
         opts = {
             -- See Configuration section for options
