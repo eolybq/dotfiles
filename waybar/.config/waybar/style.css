@@ -30,19 +30,61 @@ button {
   border-radius: 0;
 }
 
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
 /* you can set a style on hover for any module like this */
-button:hover,
-#network:hover,
-#clock:hover,
-#bluetooth:hover,
-#custom-notification:hover,
-#custom-updates:hover,
 #pulseaudio:hover {
+  /* background-color: @surface2; */
+  /* border-radius: 10px; */
   background: inherit;
   box-shadow: inset 0 -3px #ffffff;
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
 }
+
+#custom-updates:hover {
+  /* background-color: @surface2; */
+  /* border-radius: 10px; */
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#custom-notification:hover {
+  /* background-color: @surface2; */
+  /* border-radius: 10px; */
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#bluetooth:hover {
+  /* background-color: @surface2; */
+  /* border-radius: 10px; */
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#clock:hover {
+  /* background-color: @surface2; */
+  /* border-radius: 10px; */
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#network:hover {
+  /* background-color: @surface2; */
+  /* border-radius: 10px; */
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 
 #workspaces button {
   padding: 0 6px;
@@ -61,8 +103,8 @@ button:hover,
 }
 
 #workspaces button.active {
-    color:#42CCFF;
-    text-shadow: 0px 0px 6px #86ABDC;
+    color: #86ABDC;
+    text-shadow: 0px 0px 6px @bcyan;
 }
 
 #workspaces button.focused {
@@ -145,8 +187,7 @@ button:hover,
 .modules-left,
 .modules-center {
   background: transparent;
-  /* background: rgba(0, 0, 0, 0.6); */
-  border-radius: 13px;
+  border-radius: 15px;
 }
 
 .modules-right {
@@ -161,6 +202,26 @@ button:hover,
   padding: 0 10px;
 }
 
+.modules-right {
+  /* background: transparent; */
+  /* padding: 0.5rem 1rem; */
+   background-image: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,1)),
+    linear-gradient(150deg, rgba(102, 204, 255, 1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, rgba(102, 204, 255, 1) 100%);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+}
+
+.modules-left,
+.modules-center {
+  /* background: transparent; */
+  /* padding: 0.5rem 1rem; */
+   background-image: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,1)),
+    linear-gradient(150deg, rgba(102, 204, 255, 1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(102, 204, 255, 1) 100%);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+}
 
 @keyframes blink {
   to {
