@@ -44,7 +44,7 @@ bar.apply_to_config(
 
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
-config.show_new_tab_button_in_tab_bar = false
+-- config.show_new_tab_button_in_tab_bar = false
 -- config.use_fancy_tab_bar = false
 
 
@@ -53,9 +53,9 @@ config.cursor_blink_rate = 800
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 
-config.keys = {
-  { key = 'b', mods = 'CTRL', action = wezterm.action.ShowLauncher },
-}
+-- config.keys = {
+--   { key = 'b', mods = 'CTRL', action = wezterm.action.ShowLauncher },
+-- }
 
 
 local dimmer = { brightness = 0.05 }
