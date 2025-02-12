@@ -6,6 +6,9 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
 vim.keymap.set("n", "<leader>s", "<cmd>w<cr><esc>", { desc = "Save File" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
 
+vim.keymap.set("n", '""', "<cmd>reg<cr>", { silent = true })
+
+
 vim.api.nvim_set_keymap("n", '<C-w>"', ":split<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-w>%", ":vsplit<CR>", { noremap = true, silent = true })
 
@@ -38,5 +41,6 @@ local minifiles_toggle = function(...)
 	end
 end
 vim.keymap.set("n", "<C-n>", minifiles_toggle, { noremap = true, silent = true })
+
 
 vim.keymap.set({ "n", "v" }, "<leader>gh", "<cmd>CopilotChat<cr><esc>")
