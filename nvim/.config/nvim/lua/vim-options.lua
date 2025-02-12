@@ -7,6 +7,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent =  true
 vim.opt.smarttab = true
 
+vim.opt.splitright = true
 vim.opt.showmode = false
 vim.opt.relativenumber = true
 vim.o.number = true

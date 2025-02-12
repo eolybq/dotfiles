@@ -10,6 +10,9 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
 vim.api.nvim_set_keymap('n', '<C-w>"', ':split<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-w>%', ':vsplit<CR>', { noremap = true, silent = true })
 
+
+vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" })
+
 -- Clear search
 vim.keymap.set("n", "<leader>l", ":nohlsearch<CR>", { silent = true })
 
@@ -21,5 +24,7 @@ vim.keymap.set('t', '<Esc>', "<C-\\><C-n>")
 vim.keymap.set("v", "<C-c>", '"+y')        -- Copy
 vim.keymap.set("n", "<C-v>", '"+p')        -- Paste normal mode
 vim.keymap.set("i", "<C-v>", '<ESC>"+pla') -- Paste insert mode
+
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 
 vim.keymap.set({ "n", "v" }, "<leader>gh", "<cmd>CopilotChat<cr><esc>")
