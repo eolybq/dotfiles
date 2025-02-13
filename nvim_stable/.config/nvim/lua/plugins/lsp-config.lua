@@ -18,6 +18,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.marksman.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.r_language_server.setup({
 				capabilities = capabilities,
 			})

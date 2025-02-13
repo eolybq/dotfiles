@@ -40,7 +40,7 @@ return {
 		config = function(_, opts)
 			local chat = require("CopilotChat")
 
-			vim.keymap.set("n", "<C-w>g", function()
+			vim.keymap.set({ "n", "v" }, "<C-w>g", function()
 				chat.toggle({
 					window = {
 						layout = "float",
