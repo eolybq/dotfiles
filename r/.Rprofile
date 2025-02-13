@@ -27,3 +27,5 @@ options(repos = c(CRAN = "https://mirrors.nic.cz/R/"))
 q <- function(save = "no", ...) {
   quit(save = save, ...)
 }
+
+options(device=httpgd::hgd)
