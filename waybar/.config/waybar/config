@@ -51,8 +51,8 @@
         "modules-center": [
             "hyprland/window",
         ],
-        // "modules-right": [
-        //     "clock",
-        // ],
+        "modules-right": [
+            "clock",
+        ],
     }
 ]
