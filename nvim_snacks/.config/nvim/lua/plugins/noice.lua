@@ -21,14 +21,18 @@ return {
 					hover = { enabled = true },
 				},
 
+				notify = {
+					enabled = false,
+				},
+
 				presets = {
 					bottom_search = true,
 					long_message_to_split = true,
 				},
 
-                messages = {
-                    enabled = false,
-                },
+				messages = {
+					enabled = false,
+				},
 
 				cmdline = {
 					format = {
