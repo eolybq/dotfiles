@@ -16,7 +16,6 @@ require("keymaps")
 require("lazy").setup("plugins")
 
 require("ollama.init")
-require("copilot_chat.init")
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 0.7
