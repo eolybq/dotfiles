@@ -1,8 +1,8 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
-  "CopilotChat.nvim": { "branch": "main", "commit": "047ea1c1d99341a87d37d13f4cd19cd736c879d2" },
+  "CopilotChat.nvim": { "branch": "main", "commit": "494d7eae6ad89a825534f10d946169fe5c84edef" },
   "LuaSnip": { "branch": "master", "commit": "c9b9a22904c97d0eb69ccb9bab76037838326817" },
-  "R.nvim": { "branch": "main", "commit": "bf5b3582622d52b70ed39cce654bfd1530135a0a" },
+  "R.nvim": { "branch": "main", "commit": "3f98d959a5a987e3f9b2fed5d221939db440a0ed" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },

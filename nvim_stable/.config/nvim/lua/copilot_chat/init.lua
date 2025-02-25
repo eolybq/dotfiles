@@ -1,4 +1,14 @@
 -- ~/.config/nvim/lua/copilot_chat/init.lua
+require('lazy').setup({
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('telescope').setup{}
+    end
+  }
+})
+
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
 local actions = require("telescope.actions")
