@@ -45,8 +45,8 @@ return {
 					window = {
 						layout = "float",
 						title = "Quick Chat",
-						width = 0.5, -- fractional width of parent, or absolute width in columns when > 1
-						height = 0.5,
+						width = 0.8, -- fractional width of parent, or absolute width in columns when > 1
+						height = 0.8,
 					},
 				})
 			end)

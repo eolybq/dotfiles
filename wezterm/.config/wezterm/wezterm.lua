@@ -17,8 +17,9 @@ config.default_prog = {
 config.font = wezterm.font("JetBrainsMono NFM", { weight = "DemiBold" })
 config.font_size = 19
 
--- config.color_scheme = 'carbonfox'
-config.color_scheme = 'terafox'
+config.color_scheme_dirs = { '~/.config/wezterm/' }
+config.color_scheme = 'carbonfox'
+-- config.color_scheme = 'terafox'
 
 local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
 bar.apply_to_config(
