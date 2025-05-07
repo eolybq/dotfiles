@@ -116,7 +116,7 @@ return {
             desc = "Buffers",
         },
         {
-            "<leader>z",
+            "<leader>sz",
             function()
                 Snacks.picker.zoxide()
             end,

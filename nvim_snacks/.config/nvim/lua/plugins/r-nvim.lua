@@ -4,7 +4,7 @@ return {
         ft = { "r", "rmd" }, -- Lazy load for R and R Markdown files
         config = function()
             local opts = {
-                -- external_term = "tmux split-window -h -l 45 -d",
+                external_term = "tmux split-window -h -l 45 -d",
                 -- external_term = "tmux new-window",
                 -- external_term = "default",
                 R_app = "radian",
