@@ -21,7 +21,7 @@ if (interactive() || isatty(stdout())) {
     }
 }
 
-#library(colorout)
+# library(colorout)
 
 
 options(repos = c(CRAN = "https://mirrors.nic.cz/R/"))
@@ -31,3 +31,4 @@ q <- function(save = "no", ...) {
 }
 
 options(device = httpgd::hgd)
+options(browser = "/usr/bin/zen-browser")
