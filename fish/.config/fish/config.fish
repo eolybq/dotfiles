@@ -37,7 +37,7 @@ if status is-interactive
   end
 
 
-  zoxide init --cmd Z fish | source
+  zoxide init --cmd cd fish | source
 
 
   # fzf --fish | source
