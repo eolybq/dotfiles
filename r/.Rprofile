@@ -19,16 +19,16 @@ if (interactive() || isatty(stdout())) {
             verbose = FALSE
         )
     }
+    suppressMessages(library(DT))
+    options(device = httpgd::hgd)
 }
 
 # library(colorout)
 
 
 options(repos = c(CRAN = "https://mirrors.nic.cz/R/"))
+options(browser = "/usr/bin/zen-browser")
 
 q <- function(save = "no", ...) {
     quit(save = save, ...)
 }
-
-options(device = httpgd::hgd)
-options(browser = "/usr/bin/zen-browser")
