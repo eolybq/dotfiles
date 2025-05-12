@@ -122,7 +122,7 @@ button:hover,
 }
 
 #custom-gpu-temp {
-  color: @maroon;
+  color: @index16;
 }
 
 #custom-notification {
@@ -130,7 +130,7 @@ button:hover,
 }
 
 #cpu {
-  color: @maroon;
+  color: @magenta;
 }
 
 #memory {
