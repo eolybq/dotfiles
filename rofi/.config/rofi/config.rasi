@@ -16,4 +16,4 @@ configuration {
     terminal: "/usr/bin/kitty";
 }
 
-@theme "breeze_custom_border"
+@theme "breeze"
