@@ -2,6 +2,15 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+
+            vim.diagnostic.config({
+                virtual_text = true, -- zobrazí chyby přímo na řádku
+                signs = true,        -- zobrazí symboly jako E, W vedle čísel řádků
+                underline = true,    -- podtrhne řádky s chybou
+                update_in_insert = false,
+                severity_sort = true,
+            })
+
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
