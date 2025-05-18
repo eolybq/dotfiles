@@ -11,10 +11,14 @@ if status is-interactive
   #     echo " `---'"
   # end
 
-  function fish_greeting
-    set capitalized (string sub -l 1 $USER | string upper)(string sub -s 2 $USER)
-    echo -e "\n ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ \n"
-  end
+  # function fish_greeting
+  #   set capitalized (string sub -l 1 $USER | string upper)(string sub -s 2 $USER)
+  #   echo -e "\n ✦ "(set_color cyan)"Welcome to fish, the friendly interactive shell, "(set_color yellow)"$capitalized!"(set_color normal)"✦ \n"
+  # end
+
+    function fish_greeting
+      echo ""
+    end
 
 
   if not type -q fisher
