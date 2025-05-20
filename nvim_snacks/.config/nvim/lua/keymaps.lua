@@ -36,3 +36,10 @@ vim.keymap.set("n", "<C-n>", minifiles_toggle, { noremap = true, silent = true }
 
 
 vim.keymap.set({ "n", "v" }, "<leader>gh", "<cmd>CopilotChat<cr><esc>")
+
+-- resize CTRL
+vim.api.nvim_set_keymap('n', '<C-Left>',  ':vertical resize -5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +5<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-Up>',    ':resize -3<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-Down>',  ':resize +3<CR>', { noremap = true, silent = true })

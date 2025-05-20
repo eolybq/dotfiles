@@ -11,6 +11,7 @@ return {
 						comments = "italic", -- Komentáře budou kurzívou
 						keywords = "bold", -- Klíčová slova budou tučně
 						conditionals = "bold",
+                        functions = "bold",
 					},
 					inverse = {
 						match_paren = true, -- Zvýraznění párů závorek
